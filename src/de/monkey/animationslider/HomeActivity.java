@@ -7,12 +7,12 @@ import android.view.MotionEvent;
 import android.widget.ViewFlipper;
 
 public class HomeActivity extends Activity {
-	private ViewFlipper vf;  
+    private ViewFlipper vf;  
     private float oldTouchValue;
 
     @Override
-	public boolean onTouchEvent(MotionEvent touchevent) {
-		switch (touchevent.getAction())
+    public boolean onTouchEvent(MotionEvent touchevent) {
+        switch (touchevent.getAction())
         {
             case MotionEvent.ACTION_DOWN:
             {
@@ -29,23 +29,24 @@ public class HomeActivity extends Activity {
                     vf.setOutAnimation(AnimationHelper.outToRightAnimation());
                     vf.showNext();
                 }
+                
                 if (oldTouchValue > currentX && (oldTouchValue - currentX) > 150.0)
                 {
                     vf.setInAnimation(AnimationHelper.inFromRightAnimation());
                     vf.setOutAnimation(AnimationHelper.outToLeftAnimation());
                     vf.showPrevious();
                 }
-            break;
+                break;
             }
         }
         return false;
-	}
-	
-	@Override
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.homeactivity);
         
         vf = (ViewFlipper) findViewById(R.id.layoutswitcher);
-	}
+    }
 }
