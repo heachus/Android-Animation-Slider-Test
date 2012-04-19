@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, AnimationSliderActivity!</string>
+    <string name="app_name">AnimationSlider</string>
+    <string name="firstPanel">my first panel</string>
+    <string name="secondPanel">my second panel</string>
+
+</resources>
